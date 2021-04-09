@@ -16,7 +16,6 @@ const getConnection = async () => {
 }
 
 
-getConnection()
-    .then(res => {
-        console.log(res)
-    })
+
+
+module.exports = getConnection
