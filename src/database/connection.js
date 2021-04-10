@@ -3,12 +3,14 @@ const mongoose = require("mongoose")
 
 const getConnection = async () => {
     try {
-        return await mongoose.createConnection('mongodb://localhost/JWT_Auth', {
+         const connection = await mongoose.createConnection('mongodb://localhost/JWT_Auth', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useFindAndModify: false,
             useCreateIndex: true
         })
+
+        return connection
     } catch (error) {
         console.log(error)
         return null
