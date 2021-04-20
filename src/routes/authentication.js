@@ -8,7 +8,7 @@ const router = express.Router()
 
 router.post('/validate-token', validateToken)
 
-router.get('/generate-token', generateToken)
+router.post('/generate-token', generateToken)
 
 //router.post('/login', validateLoginCredentials, generateToken)
 
