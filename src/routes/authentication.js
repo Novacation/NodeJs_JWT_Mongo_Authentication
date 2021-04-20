@@ -4,12 +4,12 @@ const validateToken = require("../middlewares/jwt-token/validate")
 const router = express.Router()
 
 
-//router.post('/create-user', validateRegisterCredentials, generateToken, createUser)
+//router.post('/create-user', validateRegister, generateToken, createUser)
 
 router.post('/validate-token', validateToken)
 
-router.get('/generate-token', generateToken)
+router.post('/generate-token', generateToken)
 
-//router.post('/login', validateLoginCredentials, generateToken)
+//router.post('/login', validateLogin, generateToken)
 
 module.exports = router

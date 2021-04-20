@@ -1,4 +1,4 @@
-const validateRegisterCredentials = async (req, res, next) => {
+const validateRegister = async (req, res, next) => {
     try {
         
     } catch (error) {
