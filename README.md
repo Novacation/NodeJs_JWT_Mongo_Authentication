@@ -1,2 +1,2 @@
 # NodeJs_JWT_Mongo_Authentication
- A back-end project.
+ A Nodejs + MongoDB application for user authentication.
