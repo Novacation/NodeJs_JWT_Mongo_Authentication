@@ -3,10 +3,10 @@ const jwt = require('jsonwebtoken')
 
 
 
-module.exports = (req, res) => {
+module.exports = (req, res, next) => {
     try {
 
-        const {login, password} = req.body
+        const {login, password} = res.locals.userData
 
         const jwtSecret = process.env.JWT_SECRET
         
@@ -14,9 +14,14 @@ module.exports = (req, res) => {
             expiresIn: "24h"
         })
 
-        res.json({
+
+        res.locals.userData = {
+            login,
+            password,
             token
-        })
+        }
+
+        next()
     } catch (error) {
         console.log(error)
         return false
