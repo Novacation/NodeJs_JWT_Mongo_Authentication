@@ -31,7 +31,7 @@ class User {
         try {
             conn = await getConnection()
 
-            const usersModel = await getUsersModel()
+            const usersModel = await this.getUsersModel()
 
             const newUser = new usersModel.model({
                 login: user.getLogin,
